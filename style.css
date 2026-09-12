@@ -4,19 +4,12 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body {
     font-family: Arial, sans-serif;
     background-color: #0f172a;
     color: #e2e8f0;
     line-height: 1.6;
 }
-
-
-/* =========================
-   Navigation
-========================= */
-
 header {
     background-color: #111827;
     padding: 20px 8%;
@@ -28,32 +21,22 @@ header {
     z-index: 1000;
     border-bottom: 1px solid #334155;
 }
-
 header h1 {
     font-size: 24px;
 }
-
 nav {
     display: flex;
     gap: 25px;
 }
-
 nav a {
     color: #e2e8f0;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
 }
-
 nav a:hover {
     color: #38bdf8;
 }
-
-
-/* =========================
-   Sections
-========================= */
-
 section {
     min-height: 70vh;
     padding: 100px 8%;
@@ -61,58 +44,35 @@ section {
     flex-direction: column;
     justify-content: center;
 }
-
 section h2 {
     font-size: 40px;
     margin-bottom: 20px;
 }
-
 section p {
     max-width: 750px;
     color: #94a3b8;
     font-size: 18px;
     margin-bottom: 15px;
 }
-
-
-/* =========================
-   Home
-========================= */
-
 #home {
     min-height: 90vh;
     text-align: center;
     align-items: center;
 }
-
 #home h2 {
     font-size: 60px;
     margin-bottom: 20px;
 }
-
 #home p {
     font-size: 20px;
 }
-
-
-/* =========================
-   About
-========================= */
-
 #about {
     background-color: #111827;
 }
-
-
-/* =========================
-   Projects
-========================= */
-
 #projects {
     text-align: center;
     align-items: center;
 }
-
 #projects h3 {
     background-color: #1e293b;
     width: 100%;
@@ -125,12 +85,10 @@ section p {
     font-size: 22px;
     transition: 0.3s;
 }
-
 #projects h3:hover {
     transform: translateY(-3px);
     border-color: #38bdf8;
 }
-
 #projects h3 + p {
     background-color: #1e293b;
     width: 100%;
@@ -141,18 +99,11 @@ section p {
     border-top: none;
     border-radius: 0 0 12px 12px;
 }
-
-
-/* =========================
-   Contact
-========================= */
-
 #contact {
     background-color: #111827;
     text-align: center;
     align-items: center;
 }
-
 #contact a {
     display: inline-block;
     margin-top: 15px;
@@ -164,17 +115,10 @@ section p {
     border-radius: 8px;
     transition: 0.3s;
 }
-
 #contact a:hover {
     transform: translateY(-3px);
     background-color: #7dd3fc;
 }
-
-
-/* =========================
-   Mobile
-========================= */
-
 @media (max-width: 700px) {
 
     header {
@@ -208,4 +152,70 @@ section p {
     section p {
         font-size: 16px;
     }
+}
+#theme-toggle {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+}
+body.light-mode {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+body.light-mode header,
+body.light-mode #about,
+body.light-mode #contact {
+    background-color: #ffffff;
+}
+body.light-mode nav a {
+    color: #0f172a;
+}
+body.light-mode section p {
+    color: #475569;
+}
+body.light-mode #projects h3,
+body.light-mode #projects h3 + p {
+    background-color: #e2e8f0;
+}
+#top-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #38bdf8;
+    color: #0f172a;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+#top-button.show {
+    opacity: 1;
+    visibility: visible;
+}
+#top-button:hover {
+    transform: translateY(-4px);
+}
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #020617;
+}
+
+footer p {
+    margin: 0;
+    color: #94a3b8;
 }
