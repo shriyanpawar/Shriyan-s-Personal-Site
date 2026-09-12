@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+header {
+    background-color: #111827;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #334155;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+section {
+    min-height: 70vh;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 750px;
+    color: #94a3b8;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   Home
+========================= */
+
+#home {
+    min-height: 90vh;
+    text-align: center;
+    align-items: center;
+}
+
+#home h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 20px;
+}
+
+
+/* =========================
+   About
+========================= */
+
+#about {
+    background-color: #111827;
+}
+
+
+/* =========================
+   Projects
+========================= */
+
+#projects {
+    text-align: center;
+    align-items: center;
+}
+
+#projects h3 {
+    background-color: #1e293b;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    border: 1px solid #334155;
+    border-radius: 12px 12px 0 0;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+#projects h3:hover {
+    transform: translateY(-3px);
+    border-color: #38bdf8;
+}
+
+#projects h3 + p {
+    background-color: #1e293b;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px 20px;
+    margin-bottom: 5px;
+    border: 1px solid #334155;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+#contact {
+    background-color: #111827;
+    text-align: center;
+    align-items: center;
+}
+
+#contact a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#contact a:hover {
+    transform: translateY(-3px);
+    background-color: #7dd3fc;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    #home h2 {
+        font-size: 40px;
+    }
+
+    #home p {
+        font-size: 17px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+}
